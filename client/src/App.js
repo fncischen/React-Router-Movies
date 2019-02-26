@@ -3,7 +3,8 @@ import { Route } from 'react-router-dom';
 
 import SavedList from './Movies/SavedList';
 import MovieList from './Movies/MovieList';
-import Movie from './Movies/Movie';
+import MovieCard from './Movies/MovieCard';
+import Movie from "./Movies/Movie";
 
 export default class App extends Component {
   constructor() {
@@ -19,10 +20,11 @@ export default class App extends Component {
     this.setState({ savedList });
   };
 
+  // use inline rendering for render props or passing relevant render prop data to component 
   render() {
     return (
       <div>
-        <SavedList list={this.state.savedList} />
+        <SavedList list={this.state.savedList} addSaved={this.addToSavedList} />
         <div>
 
         <Route exact path="/" component={MovieList} />
