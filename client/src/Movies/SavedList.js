@@ -6,8 +6,8 @@ export default class SavedList extends Component {
     super(props);
   }
 
-  // add route for saved movies; 
-  
+  // add router for saved movies; 
+
 
   render() {
     return (
@@ -19,6 +19,7 @@ export default class SavedList extends Component {
         <Link to="/">
         <div className="home-button">Home</div>
         </Link>
+
       </div>
     );
   }
